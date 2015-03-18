@@ -31,12 +31,12 @@
 
 #overlay_background {
     position:absolute;
-    left:calc(50% - 125px);
+    left:calc(50% - 6.5vw);
     top:50px;
     background-size:cover;
     opacity:1;
-    width:250px;
-    height:250px;
+    width:13vw;
+    height:13vw;
     border-radius:50%;
     z-index: -3;
     box-shadow: 0px 0px 20px white;
@@ -45,11 +45,11 @@
 
 #overlay_text_location {
     color: #FFF;
-    font-size:54px;
+    font-size:3vw;
     z-index: -2;
     text-shadow: 0px 0px 20px white;
     text-align:center;
-    margin-top:280px;
+    margin-top:15vw;
     margin-bottom:0px;
     font-family:"Segoe UI Light";
 }

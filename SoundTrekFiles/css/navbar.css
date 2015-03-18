@@ -12,7 +12,7 @@ body {
 }
 
 #navbar_main {
-    background-color: #1E232A;
+    background-color: #000;
     border-color: #000;
     height:20px;
     /*Height should be 225px when dropdown is on*/

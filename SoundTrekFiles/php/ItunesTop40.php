@@ -84,6 +84,10 @@ class iTunes
     }
 }
 
+function jsonRemoveUnicodeSequences($struct) {
+   return preg_replace("/\\\\u([a-f0-9]{4})/e", "iconv('UCS-4LE','UTF-8',pack('V', hexdec('U$1')))", json_encode($struct));
+}
+
 if(isset($_POST['term']))
 {
     $term = urlencode($_POST['term']); // user input 'term' in a form
@@ -105,7 +109,6 @@ if(isset($_POST['term']))
                 $images[] = $image->label;
             }
             $i++;
-
         }
          foreach($entry-> link as $link){
           foreach($link->attributes as $attributes){
@@ -113,12 +116,10 @@ if(isset($_POST['term']))
               $music_files[] = $attributes;
             }
           }
-
         }
-
     }
    
-    echo json_encode($title_array);
+    echo jsonRemoveUnicodeSequences($title_array);
     echo json_encode($images);
     echo json_encode($music_files);
 }
@@ -145,9 +146,5 @@ if(isset($_POST['termFull']))
       }
    
     echo json_encode($googleimage);
-}
-
-function jsonRemoveUnicodeSequences($struct) {
-    return preg_replace("/\\\\u([a-f0-9]{4})/e", "iconv('UCS-4LE','UTF-8',pack('V', hexdec('U$1')))", json_encode($struct));
 }
 ?>

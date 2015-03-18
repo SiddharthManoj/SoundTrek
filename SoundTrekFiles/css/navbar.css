@@ -1,6 +1,11 @@
 ﻿@charset "utf-8";
 /* CSS Document */
 
+@font-face {
+    font-family: 'Segoe UI Light';
+    src: url(segoe_light.woff);
+}
+
 body {
     font-family: 'Segoe UI Light';
     background-color: #222;

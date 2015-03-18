@@ -41,6 +41,8 @@ function updateInfo() {
     httpRequest.send("term=" + window.frames['map_frame'].curCountry);
     var response = String(httpRequest.response);
 
+    //response = jsonRemoveUnicodeSequences(response);
+
 
     var removed = response.replace('"', "");
     while (response != removed) {
@@ -59,6 +61,8 @@ function updateInfo() {
     httpRequest2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     httpRequest2.send("termFull=" + window.frames['map_frame'].curCountryName);
     var response2 = String(httpRequest2.response);
+
+    //response2 = jsonRemoveUnicodeSequences(response2);
 
     var removed2 = response2.replace('"', "");
     while (response2 != removed2) {

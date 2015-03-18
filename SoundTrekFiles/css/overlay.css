@@ -6,7 +6,7 @@
     top:60px;
     left:20px;
     width:calc(50% - 10vw);
-    height:calc(100% - 4vw);
+    height:calc(100% - 80px);
     background-color:rgba(0,0,0,0.5);
     z-index: -4;
     padding:20px;
@@ -189,7 +189,7 @@
     vertical-align:middle;
     height:30px;
     width:30px;
-    border-radius:50%;
+    border-radius:0%;
     display:inline
 }
 

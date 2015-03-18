@@ -91,15 +91,19 @@ function jsonRemoveUnicodeSequences($struct) {
 if(isset($_POST['term']))
 {
     $term = urlencode($_POST['term']); // user input 'term' in a form
-   
+
     #$json =  file_get_contents('http://itunes.apple.com/search?term=Hozier&country=' . $term.'&limit=10&media=music&entity=musicArtist,musicTrack,album,mix,song');
     $json =  file_get_contents('https://itunes.apple.com/'. $term. '/rss/topsongs/limit=10/explicit=true/json');
     $array = json_decode($json, false);
-    
+
     $i = 2;
     $images = array();
     $title_array = array();
     $music_files = array();
+    if($array->feed->entry == null){
+        $json =  file_get_contents('https://itunes.apple.com/us/rss/topsongs/limit=10/explicit=true/json');
+        $array = json_decode($json, false);
+    }
     foreach ($array->feed->entry as $entry){
         foreach($entry->title as $title){
             $title_array[] = $title;

@@ -11,8 +11,8 @@
     z-index: -4;
     padding:20px;
     border-radius: 8px;
-    opacity:0;
-    visibility:hidden;
+    opacity:100;
+    visibility:visible;
     -webkit-transition:all 0.5s ease-out; 
     transition:all 0.3s ease-out; 
 }

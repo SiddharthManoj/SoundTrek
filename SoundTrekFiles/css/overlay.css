@@ -49,7 +49,7 @@
     z-index: -2;
     text-shadow: 0px 0px 20px white;
     text-align:center;
-    margin-top:15vw;
+    margin-top:30vh;
     margin-bottom:0px;
     font-family:"Segoe UI Light";
 }
@@ -173,6 +173,9 @@
 
 #overlay_text_toplist {
     color:#FFF;
+    max-height:47vh;
+    overflow-x:hidden;
+    overflow-y:hidden;
 }
 
 #overlay_text_toplist li {
@@ -187,10 +190,10 @@
 
 #overlay_text_toplist img {
     vertical-align:middle;
-    height:30px;
-    width:30px;
+    height:3vh;
+    width:3vh;
     border-radius:10%;
-    display:inline
+    display:inline;
 }
 
 #overlay_text_toplist li a {
@@ -198,14 +201,18 @@
     vertical-align:middle;
     margin:auto;
     margin-left:5px;
-    font-size:14px;
+    font-size:1.5vh;
     margin-top:0px;
     margin-bottom:0px;
     text-decoration:none;
+    text-shadow: 0px 0px 20px black;
+    -webkit-transition:all 0.2s ease-out; 
+    transition:all 0.2s ease-out; 
 }
 
 #overlay_text_toplist li a:hover {
-    font-weight: bold;
+    color:#FFF;
+    text-shadow: 0px 0px 20px white;
 }
 
 #overlay_player_song {

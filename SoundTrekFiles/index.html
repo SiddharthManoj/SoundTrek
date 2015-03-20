@@ -51,10 +51,10 @@
         </div><!-- /.container-fluid -->
         <h1 id="navbar_title"><img src="img/logo_small.png" style="width:36px; margin-top:-10px;" />  SoundTrek</h1>
         <ul id="dropdown_content">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Preferences</a></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a href="#" onclick="toggleDropdown();">Home</a></li>
+            <li><a href="#" onclick="toggleAbout(); toggleDropdown();">About</a></li>
+            <li><a href="#" onclick="toggleDropdown();">Preferences</a></li>
+            <li><a href="#" onclick="toggleDropdown();">Log Out</a></li>
         </ul>
     </nav>
 
@@ -111,9 +111,19 @@
         </table>
     </div>
 
-    <!--<div class="container" id="splash_screen" onclick="fadeSplash()">
+    <div class="container" id="splash_screen" onclick="fadeSplash()">
         <img src="img/logo.png" style="position: fixed; top: calc(50% - 300px); left: calc(50% - 197px);" />
-        <h1 style="color: #FFF; font-size: 72px; z-index: -2; text-shadow: 0px 0px 20px white; text-align: center; position: fixed; bottom:250px; left: calc(50% - 150px); font-family:"Segoe UI Light";">SoundTrek</h1>
-    </div>-->
+        <h1 style="color: #FFF; font-size: 72px; z-index: -2; text-shadow: 0px 0px 20px white; text-align: center; position: fixed; bottom:250px; left: calc(50% - 155px); font-family:"Segoe UI Light";">SoundTrek</h1>
+    </div>
+
+    <div class="container" id="about_screen">
+        <a href="#" onclick="toggleAbout()"><span id="overlay_player_button_icon" class="glyphicon glyphicon-remove" style="color: #FFF; position: fixed; font-size:24px; top: calc(50% - 280px); left: calc(50% + 250px); " aria-hidden="true"></span></a>
+        <img src="img/logo.png" style="position: fixed; width: 20vw; height: 20vw; bottom:400px; calc(50% - 325px); left: calc(50% - 10vw);" />
+        <h1 style="color: #FFF; font-size: 72px; z-index: -2; text-shadow: 0px 0px 20px white; text-align: center; position: fixed; bottom:300px; left: calc(50% - 155px); font-family:" segoe ui light";">SoundTrek</h1>
+        <h3 style="color: #FFF; font-size: 40px; z-index: -2; text-shadow: 0px 0px 20px white; text-align: center; position: fixed; bottom:230px; left: calc(50% - 90px); font-family:" segoe ui light";">Created by:</h3>
+        <h5 style="color: #FFF; font-size: 24px; z-index: -2; text-shadow: 0px 0px 20px white; text-align: center; position: fixed; bottom:180px; left: calc(50% - 250px); font-family:" segoe ui light";">Aaron Hong, Kyle San, Siddharth Manoj, Steven Li</h5>
+        <h5 style="color: #FFF; font-size: 24px; z-index: -2; text-shadow: 0px 0px 20px white; text-align: center; position: fixed; bottom:100px; left: calc(50% - 145px); font-family:" segoe ui light";">For Microsoft Open Hack 2015</h5>
+    </div>
+
 </body>
 </html>

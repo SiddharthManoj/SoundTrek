@@ -194,13 +194,6 @@ function search() {
     });
 }
 
-function fadeSplash() {
-    document.getElementById('splash_screen').style.opacity = 0;
-    setTimeout(function () {
-        document.getElementById('splash_screen').style.visibility = "hidden";
-    }, 400);
-}
-
 function like() {
     document.getElementsByClassName("glyphicon glyphicon-heart").style.fontSize = "80px";
 }

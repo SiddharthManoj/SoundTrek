@@ -186,14 +186,9 @@ function search() {
     var text = document.getElementById('navbar_menu_search_field').value;
     window.frames['map_frame'].geocoder.geocode({ 'address' : text }, function (results, status) {
         if (status == window.frames['map_frame'].google.maps.GeocoderStatus.OK) {
-            window.frames['map_frame'].map.setCenter(results[0].geometry.location);
             window.frames['map_frame'].getCountry(results[0].geometry.location);
         }
         else {
         }
     });
-}
-
-function like() {
-    document.getElementsByClassName("glyphicon glyphicon-heart").style.fontSize = "80px";
 }

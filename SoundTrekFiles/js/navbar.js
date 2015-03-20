@@ -24,3 +24,7 @@ function toggleAbout() {
         document.getElementById('about_screen').style.opacity = 1;
     }
 }
+
+function like() {
+    document.getElementsByClassName("glyphicon glyphicon-heart").style.fontSize = "80px";
+}
